@@ -1,11 +1,15 @@
-import React from 'react';
+import router from "routing";
+import { RouterProvider } from "react-router-dom";
+import CssBaseline from "@mui/material/CssBaseline";
+import { Fragment } from "react";
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<Fragment>
+			<CssBaseline />
+			<RouterProvider router={router} />
+		</Fragment>
+	);
+};
 
 export default App;
