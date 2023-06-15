@@ -3,8 +3,10 @@ import Box from "@mui/material/Box";
 
 const Section2 = () => {
 	return (
-		<Box className="sections">
-			<Typography variant="h1">Section 2</Typography>
+		<Box className="sections text-section">
+			<Typography variant="h1" className="hidden">
+				Section 2
+			</Typography>
 		</Box>
 	);
 };

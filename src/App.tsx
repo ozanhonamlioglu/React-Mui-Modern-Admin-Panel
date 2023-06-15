@@ -1,14 +1,14 @@
 import router from "routing";
 import { RouterProvider } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
-import { Fragment } from "react";
+import MakeTheme from "utils/theme/MakeTheme";
 
 const App = () => {
 	return (
-		<Fragment>
+		<MakeTheme>
 			<CssBaseline />
 			<RouterProvider router={router} />
-		</Fragment>
+		</MakeTheme>
 	);
 };
 
