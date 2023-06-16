@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 
 const Section1 = () => {
 	return (
-		<Box className="sections text-section">
+		<Box className="sectionbox section text-section">
 			<Stack>
 				<Typography variant="h1" className="hidden">
 					Hello Admin 👋

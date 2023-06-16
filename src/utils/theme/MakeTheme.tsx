@@ -20,7 +20,7 @@ const MakeTheme: React.FC<PropsWithChildren> = ({ children }) => {
 				},
 				...options,
 				text: {
-					primary: options.grey?.[900],
+					primary: options.grey?.[700],
 					secondary: options.grey?.[500],
 					disabled: options.grey?.[300]
 				},

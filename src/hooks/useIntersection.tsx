@@ -1,13 +1,18 @@
 import { useEffect } from "react";
 
-const useIntersection = (querySelector: string, target: string, options?: IntersectionObserverInit) => {
+const useIntersection = (
+	querySelector: string,
+	target: string,
+	remove: boolean,
+	options?: IntersectionObserverInit
+) => {
 	useEffect(() => {
 		const observer = new IntersectionObserver(entries => {
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					entry.target.classList.add(target);
 				} else {
-					entry.target.classList.remove(target);
+					remove && entry.target.classList.remove(target);
 				}
 			});
 		}, options);

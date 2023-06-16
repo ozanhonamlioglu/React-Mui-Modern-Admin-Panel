@@ -1,9 +1,15 @@
-.sections {
+.sectionbox {
 	width: 100%;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.stickybox {
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
 }
 
 .text-section .MuiTypography-root {

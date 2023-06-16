@@ -1,14 +1,14 @@
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
-const Section2 = () => {
+const Section3 = () => {
 	return (
-		<Box className="sectionbox section text-section">
+		<Box className="sectionbox stickybox" bgcolor="primary.300">
 			<Typography variant="h1" className="hidden">
-				Section 2
+				Section 3
 			</Typography>
 		</Box>
 	);
 };
 
-export default Section2;
+export default Section3;

@@ -3,6 +3,7 @@ import Page from "layouts/Page";
 
 import ShowCase from "pages/ShowCase";
 import Home from "pages/Home";
+import Error404 from "pages/errors/Error404";
 
 export const mainRoute: RouteObject[] = [
 	{
@@ -18,5 +19,9 @@ export const mainRoute: RouteObject[] = [
 				element: <Home />
 			}
 		]
+	},
+	{
+		path: "*",
+		element: <Error404 />
 	}
 ];
