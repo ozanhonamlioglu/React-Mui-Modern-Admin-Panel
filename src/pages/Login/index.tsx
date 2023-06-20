@@ -26,7 +26,7 @@ const Login = () => {
 							padding: 5
 						}}
 						elevation={0}>
-						<Stack sx={{ width: "80%" }} spacing={2}>
+						<Stack sx={{ width: "100%" }} spacing={2}>
 							<Typography variant="h3" sx={{ alignSelf: "center" }} fontFamily={"Tilt Prism, cursive"}>
 								Dashboard Login
 							</Typography>
