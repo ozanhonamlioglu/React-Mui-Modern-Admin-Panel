@@ -14,9 +14,37 @@
 		"ecmaVersion": "latest",
 		"sourceType": "module"
 	},
-	"plugins": ["@typescript-eslint", "react"],
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"typescript": {
+				"alwaysTryTypes": true
+			}
+		}
+	},
+	"plugins": ["@typescript-eslint", "react", "import"],
 	"rules": {
 		"react/react-in-jsx-scope": "off",
-		"react/jsx-uses-react": "off"
+		"react/jsx-uses-react": "off",
+		"import/no-unresolved": "error",
+		"sort-imports": [
+			"error",
+			{
+				"ignoreCase": true,
+				"ignoreDeclarationSort": true
+			}
+		],
+		"import/order": [
+			"error",
+			{
+				"newlines-between": "always",
+				"alphabetize": {
+					"order": "asc" /* sort in ascending order. Options: ['ignore', 'asc', 'desc'] */,
+					"caseInsensitive": true /* ignore case. Options: [true, false] */
+				}
+			}
+		]
 	}
 }

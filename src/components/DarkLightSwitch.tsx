@@ -1,9 +1,10 @@
 import { styled } from "@mui/material";
 import Switch from "@mui/material/Switch";
 import React from "react";
+import { useSnapshot } from "valtio";
+
 import { themeReducer } from "store/reducers/themeReducer";
 import themeStore from "store/themeStore";
-import { useSnapshot } from "valtio";
 
 const TheSwitch = styled(Switch)(({ theme }) => ({
 	"&.MuiSwitch-root": {

@@ -1,9 +1,11 @@
+import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
 import React, { PropsWithChildren, useMemo } from "react";
-import themeStore from "store/themeStore";
 import { useSnapshot } from "valtio";
+
 import { paletteOptions } from "./paletteOptions";
-import { ThemeProvider } from "@emotion/react";
+
+import themeStore from "store/themeStore";
 
 const MakeTheme: React.FC<PropsWithChildren> = ({ children }) => {
 	const snap = useSnapshot(themeStore);

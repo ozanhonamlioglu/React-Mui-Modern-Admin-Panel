@@ -1,5 +1,6 @@
-import { AuthStore } from "types/store/auth";
 import { proxy } from "valtio";
+
+import { AuthStore } from "types/store/auth";
 
 const authStore: AuthStore = proxy({
 	user: {

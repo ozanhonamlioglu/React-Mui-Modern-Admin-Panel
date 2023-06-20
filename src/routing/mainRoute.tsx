@@ -1,9 +1,9 @@
 import { RouteObject } from "react-router-dom";
-import Page from "layouts/Page";
 
-import ShowCase from "pages/ShowCase";
-import Home from "pages/Home";
+import Page from "layouts/Page";
 import Error404 from "pages/errors/Error404";
+import Home from "pages/Home";
+import ShowCase from "pages/ShowCase";
 
 export const mainRoute: RouteObject[] = [
 	{

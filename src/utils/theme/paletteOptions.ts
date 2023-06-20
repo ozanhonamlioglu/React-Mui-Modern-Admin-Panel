@@ -1,5 +1,6 @@
 import { PaletteMode, PaletteOptions } from "@mui/material";
-import { greyColors, colors } from "./colors";
+
+import { colors, greyColors } from "./colors";
 
 export const paletteOptions = (mode: PaletteMode): PaletteOptions => {
 	const grey = {

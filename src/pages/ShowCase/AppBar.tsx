@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+
 import SunAndMoonSwitch from "components/DarkLightSwitch";
 import GrowingBorderMenu from "components/menu/GrowingMenu";
 

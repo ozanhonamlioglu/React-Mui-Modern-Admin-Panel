@@ -1,6 +1,7 @@
-import router from "routing";
-import { RouterProvider } from "react-router-dom";
 import CssBaseline from "@mui/material/CssBaseline";
+import { RouterProvider } from "react-router-dom";
+
+import router from "routing";
 import MakeTheme from "utils/theme/MakeTheme";
 
 const App = () => {
