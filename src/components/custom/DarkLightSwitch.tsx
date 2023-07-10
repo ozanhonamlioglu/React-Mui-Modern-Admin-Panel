@@ -1,10 +1,8 @@
 import { styled } from "@mui/material";
 import Switch from "@mui/material/Switch";
 import React from "react";
-import { useSnapshot } from "valtio";
 
-import { themeReducer } from "store/reducers/themeReducer";
-import themeStore from "store/themeStore";
+import useAppState from "context/AppContext/useAppState";
 
 const TheSwitch = styled(Switch)(({ theme }) => ({
 	"&.MuiSwitch-root": {
@@ -106,14 +104,10 @@ const TheSwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const SunAndMoonSwitch: React.FC = () => {
-	const snap = useSnapshot(themeStore);
+	const { state, dispatch } = useAppState();
 
 	return (
-		<TheSwitch
-			disableRipple
-			checked={snap.mode === "dark"}
-			onChange={() => themeReducer("changeMode", snap.mode === "dark" ? "light" : "dark")}
-		/>
+		<TheSwitch disableRipple checked={state.theme === "dark"} onChange={() => dispatch({ type: "SWITCH_MODE" })} />
 	);
 };
 

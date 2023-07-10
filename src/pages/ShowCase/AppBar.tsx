@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 
-import SunAndMoonSwitch from "components/DarkLightSwitch";
+import SunAndMoonSwitch from "components/custom/DarkLightSwitch";
 import GrowingBorderMenu from "components/menu/GrowingMenu";
 
 const pages = [

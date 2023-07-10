@@ -1,18 +1,16 @@
 import { ThemeProvider } from "@emotion/react";
 import { createTheme } from "@mui/material";
 import React, { PropsWithChildren, useMemo } from "react";
-import { useSnapshot } from "valtio";
 
 import { paletteOptions } from "./paletteOptions";
 
-import themeStore from "store/themeStore";
+import useAppState from "context/AppContext/useAppState";
 
 const MakeTheme: React.FC<PropsWithChildren> = ({ children }) => {
-	const snap = useSnapshot(themeStore);
-	const mode = snap.mode;
+	const { state } = useAppState();
 
 	const theme = useMemo(() => {
-		const options = paletteOptions(mode);
+		const options = paletteOptions(state.theme);
 
 		return createTheme({
 			palette: {
@@ -27,12 +25,12 @@ const MakeTheme: React.FC<PropsWithChildren> = ({ children }) => {
 					disabled: options.grey?.[300]
 				},
 				background: {
-					paper: mode === "dark" ? options.grey?.[100] : options.grey?.[200],
-					default: mode === "dark" ? options.grey?.[100] : options.grey?.[200]
+					paper: state.theme === "dark" ? options.grey?.[100] : options.grey?.[200],
+					default: state.theme === "dark" ? options.grey?.[100] : options.grey?.[200]
 				}
 			}
 		});
-	}, [mode]);
+	}, [state.theme]);
 
 	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
