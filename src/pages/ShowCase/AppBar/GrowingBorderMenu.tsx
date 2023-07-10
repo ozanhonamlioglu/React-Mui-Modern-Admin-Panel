@@ -5,7 +5,7 @@ import { styled } from "@mui/material/styles";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const StyledAppBarListLinks = styled(Box)(({ theme }) => ({
+const GrowingMenuList = styled(Box)(() => ({
 	"& > .MuiButton-root": {
 		"&:hover": {
 			backgroundColor: "transparent"
@@ -46,13 +46,13 @@ const StyledAppBarListLinks = styled(Box)(({ theme }) => ({
 const GrowingBorderMenu: React.FC<{ pages: { name: string; path: string }[] }> = ({ pages }) => {
 	const navigate = useNavigate();
 	return (
-		<StyledAppBarListLinks>
+		<GrowingMenuList>
 			{pages.map((page, index) => (
 				<Button key={index} color="inherit" disableRipple onClick={() => navigate(page.path)}>
 					<Typography color="wheat">{page.name}</Typography>
 				</Button>
 			))}
-		</StyledAppBarListLinks>
+		</GrowingMenuList>
 	);
 };
 
